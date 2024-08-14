@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stockwiz</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Place favicon.ico in the root directory -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/stockwiz-favicon.png"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/aos.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M9KD5K2G");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!--start Microsoft Clarity-->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "lim410gecm");
+    </script>
+    <!--end Microsoft Clarity-->
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "527782925392702");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=527782925392702&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script>
+      var url =
+        "https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?72882";
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = url;
+      var options = {
+        enabled: true,
+        chatButtonSetting: {
+          backgroundColor: "#0CD481",
+          ctaText: "Chat With Us",
+          borderRadius: "25",
+          marginLeft: "0",
+          marginRight: "20",
+          marginBottom: "20",
+          ctaIconWATI: false,
+          position: "right",
+        },
+        brandSetting: {
+          brandName: "Stockwiz",
+          brandSubTitle: "undefined",
+          brandImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp4AU_CbyoPe43La6RFNa_A5m-jh4B42W2dKhjncwp_Q&s",
+          welcomeText: "Hi. How can I help you?",
+          messageText:
+            "Hello, %0A%0AI just visited your website, I have some queries. Please connect me with the support team. %0A%0A{{page_title}}%0A{{page_link}}",
+          backgroundColor: "#0CD481",
+          ctaText: "Chat With Us",
+          borderRadius: "25",
+          autoShow: false,
+          phoneNumber: "918949800532",
+        },
+      };
+      s.onload = function () {
+        CreateWhatsappChatWidget(options);
+      };
+      var x = document.getElementsByTagName("script")[0];
+      x.parentNode.insertBefore(s, x);
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M9KD5K2G"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <main class="wrapper">
+      <div class="loader">
+        <div class="d-flex justify-content-center">
+          <img src="./assets/images/app-loader.gif" alt="app-loader" />
+        </div>
+      </div>
+      <header>
+        <nav
+          class="navbar resp_menu_sec navbar-expand-lg navbar-light bg-light custom-bg-gradient"
+        >
+          <div class="container">
+            <a class="navbar-brand" href="index.html"
+              ><img src="assets/images/stockwiz-logo.svg" alt="image logo"
+            /></a>
+            <div class="resp_menu d-flex align-items-center">
+              <a
+                href="https://wa.me/918949800532"
+                class="online-icon d-lg-none d-block p-0 me-lg-2 me-1"
+                ><img src="./assets/images/whatsapp.png" alt="whatsapp image"
+              /></a>
+              <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button> -->
+              <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div
+              class="collapse menu navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link highlight-sv" aria-current="page" href="#"
+                    >Live Webinar</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="on-demand-webinar.html"
+                    >On-Demand Webinar</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact_us.html">Contact Us</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <a
+                  href="https://wa.me/918949800532"
+                  class="online-icon d-lg-block d-none"
+                  target="_blank"
+                  ><img src="./assets/images/whatsapp.png" alt="whatsapp image"
+                /></a>
+                <a
+                  href="#"
+                  class="discover-btn geturl d-lg-block d-none"
+                  target="_blank"
+                  >Sign Up</a
+                >
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!--start-Live-Webinar-->
+      <!-- <section class="hero-banner-dv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-xl-6 col-lg-6"> 
+                        <div class="banner-caption text-md-start text-center">
+
+                            <h1 id="mainHeading" class="d-md-none d-inline-block">
+                            Learn Institutional<br>
+                                <div class=" resp-animate d-inline-block">
+                                    <span>Order Flow</span>
+                                    <span>Smart Money</span>
+                                    <span>Volatility</span>
+                                    <span>Breakout</span>
+                                </div>
+                                <span class="d-block bg-head-ellipse">Like The Banks</span>
+                            </h1>
+
+                            <h1 class="d-md-block d-none">Learn Institutional Trading & Trade Like The Banks</h1>
+                            <span class="mt-3">Catch The Breakouts Before Everyone Else.</span>
+                            <div class="sign-btn">
+                                <a href="#" class="hero-signup btn-animation geturl" target="_blank">Sign Up Now!</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="responsive_banner d-lg-none d-block">
+                <img src="./assets/images/banner/responsive_banner.png">
+            </div>
+        </section> -->
+      <section
+        class="hero-banner-dv on-demand-dv"
+        style="background-image: url(./assets/images/banner/banner-grid.png)"
+      >
+        <div class="container">
+          <div class="stock-icon-wrp">
+            <div class="stock-icon wowWrap">
+              <img
+                class="wow zoom-in-zoom-out animate__infinite infinite first"
+                data-wow-duration="2s"
+                data-wow-iteration="1000"
+                data-wow-delay="100ms"
+                src="./assets/images/stock-icon/reliance.svg"
+                alt="reliance"
+              />
+              <img
+                class="wow zoom-in-zoom-out animate__infinite infinite second"
+                data-wow-duration="2s"
+                data-wow-iteration="1000"
+                data-wow-delay="200ms"
+                src="./assets/images/stock-icon/adani.svg"
+                alt="adani"
+              />
+              <img
+                class="wow zoom-in-zoom-out animate__infinite infinite three"
+                data-wow-duration="2s"
+                data-wow-iteration="1000"
+                data-wow-delay="300ms"
+                src="./assets/images/stock-icon/icic.svg"
+                alt="icic"
+              />
+              <img
+                class="wow zoom-in-zoom-out animate__infinite infinite four"
+                data-wow-duration="2s"
+                data-wow-iteration="1000"
+                data-wow-delay="400ms"
+                src="./assets/images/stock-icon/zomato.svg"
+                alt="zomato"
+              />
+              <img
+                class="wow zoom-in-zoom-out animate__infinite infinite five"
+                data-wow-duration="2s"
+                data-wow-iteration="1000"
+                data-wow-delay="500ms"
+                src="./assets/images/stock-icon/sbi.svg"
+                alt="sbi"
+              />
+              <!-- <img class="wow zoom-in-zoom-out animate__infiniteinfinite six" data-wow-duration="2s" data-wow-iteration="1000" data-wow-delay="600ms" src="./assets/images/stock-icon/5paisa.png" alt="5paisa"> -->
+              <img
+                class="wow zoom-in-zoom-out animate__infinite infinite sevan"
+                data-wow-duration="2s"
+                data-wow-iteration="1000"
+                data-wow-delay="700ms"
+                src="./assets/images/stock-icon/airtel.svg"
+                alt="airtel"
+              />
+              <img
+                class="wow zoom-in-zoom-out animate__infinite infinite eight"
+                data-wow-duration="2s"
+                data-wow-iteration="1000"
+                data-wow-delay="800ms"
+                src="./assets/images/stock-icon/infosys.svg"
+                alt="infosys"
+              />
+              <img
+                class="wow zoom-in-zoom-out animate__infinite infinite nine"
+                data-wow-duration="2s"
+                data-wow-iteration="1000"
+                data-wow-delay="900ms"
+                src="./assets/images/stock-icon/hdfc.svg"
+                alt="hdfc"
+              />
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 mb-lg-0 mb-4">
+              <div class="banner-caption text-lg-start text-center">
+                <div class="">
+                  <!--banner_crd_brder class remove form here-->
+                  <h1 id="mainHeading" class="d-md-block d-none">
+                    Learn Institutional
+                    <div class="ondem_ban_text d-inline fw-bolder">
+                      Trading & Trade
+                    </div>
+                    Like The Banks
+                  </h1>
+                  <!-- <h1 id="mainHeading" class="d-md-none d-block">
+                                    <div class="ondem_ban_text d-inline fw-bolder">Learn <br>Institutional Trading</div> <br> &amp; <br> Trade Like The Banks 
+                                </h1> -->
+
+                  <h1 id="mainHeading" class="d-md-none d-block">
+                    Learn Institutional
+                    <div class="ondem_ban_text d-inline fw-bolder">
+                      Trading & Trade
+                    </div>
+                    Like The Banks
+                  </h1>
+
+                  <span class="mt-3 d-block"
+                    >Catch The Breakouts Before Everyone Else.</span
+                  >
+                </div>
+                <div class="sign-btn">
+                  <a
+                    href="#"
+                    class="hero-signup btn-animation geturl mb-4"
+                    target="_blank"
+                    >Join Now (English)</a
+                  >
+                  <a
+                    href="#"
+                    class="hero-signup btn-animation hindiurl btn-sky"
+                    target="_blank"
+                    >Join Now (Hindi)</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+              <div class="ondem_right text-center">
+                <img src="./assets/images/banner-top.png" alt="banner-top" />
+                <div
+                  class="seb_card sebi_card_img d-flex m-auto my-0 align-items-center"
+                >
+                  <div class="sebi-img">
+                    <img
+                      src="./assets/images/ic_sharp-verified.svg"
+                      alt="ic_sharp-verified"
+                    />
+                  </div>
+                  <div class="sebi-ctn text-center">
+                    <span>SEBI Registered Research Analyst</span>
+                    <h3>INH000013925</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="responsive_banner d-lg-none d-block">
+                <img src="./assets/images/banner/responsive_banner.png">
+            </div> -->
+        <!--start-->
+        <div class="stock-topic d-lg-block d-none">
+          <div class="tradingview-widget-container">
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+              async
+            >
+              {
+              "symbols": [
+              {
+              "description": "",
+              "proName": "BSE:RELIANCE"
+              },
+              {
+              "description": "",
+              "proName": "BSE:HDFCBANK"
+              },
+              {
+              "description": "",
+              "proName": "BSE:TATAMOTORS"
+              },
+              {
+              "description": "",
+              "proName": "BSE:BHARTIARTL"
+              },
+              {
+              "description": "",
+              "proName": "BSE:ZOMATO"
+              },
+              {
+              "description": "",
+              "proName": "BSE:ICICIBANK"
+              },
+              {
+              "description": "",
+              "proName": "BSE:DLF"
+              },
+              {
+              "description": "",
+              "proName": "BSE:INFY"
+              },
+              {
+              "description": "",
+              "proName": "BSE:JINDALSTEL"
+              }
+              ],
+              "showSymbolLogo": true,
+              "isTransparent": true,
+              "displayMode": "adaptive",
+              "colorTheme": "dark",
+              "locale": "en"
+              }
+            </script>
+          </div>
+        </div>
+        <!--end-->
+      </section>
+      <!--end-->
+
+      <div class="stock-topic d-lg-none d-block">
+        <div class="tradingview-widget-container">
+          <script
+            type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+            async
+          >
+            {
+            "symbols": [
+            {
+            "description": "",
+            "proName": "BSE:RELIANCE"
+            },
+            {
+            "description": "",
+            "proName": "BSE:HDFCBANK"
+            },
+            {
+            "description": "",
+            "proName": "BSE:TATAMOTORS"
+            },
+            {
+            "description": "",
+            "proName": "BSE:BHARTIARTL"
+            },
+            {
+            "description": "",
+            "proName": "BSE:ZOMATO"
+            },
+            {
+            "description": "",
+            "proName": "BSE:ICICIBANK"
+            },
+            {
+            "description": "",
+            "proName": "BSE:DLF"
+            },
+            {
+            "description": "",
+            "proName": "BSE:INFY"
+            },
+            {
+            "description": "",
+            "proName": "BSE:JINDALSTEL"
+            }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": true,
+            "displayMode": "adaptive",
+            "colorTheme": "dark",
+            "locale": "en"
+            }
+          </script>
+        </div>
+      </div>
+
+      <!--start-->
+      <section
+        class="webinar-links master_art_sec no-scroll position-relative mb-custom-padding text-lg-center"
+        id="master_art_sec"
+      >
+        <div class="sky-shap position-absolute">
+          <img src="./assets/images/shap/sky-ellipse.png" alt="sky-ellipse" />
+        </div>
+        <div class="container">
+          <div
+            class="heading-dv text-center aos-init"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h1 id="mainHeading" class="d-inline-block">
+              Master The Art of<br />
+              <div class="animate-text">
+                <span>Order Flow</span>
+                <span>Smart Money</span>
+                <span>Volatility</span>
+                <span>Breakout</span>
+              </div>
+              <span class="d-block bg-head-ellipse"
+                >Trading Using Our Squeeze Strategy</span
+              >
+            </h1>
+            <p class=" ">
+              Unlock The Secrets Of Professional Institutional Traders
+            </p>
+          </div>
+          <div
+            class="row justify-content-center d-md-flex aos-init"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="col-lg-8 text-center">
+              <div class="timeline-details mb-5">
+                <p class="mb-0 text-light datetime"></p>
+                <div class="sign-btn mt-0 ms-lg-5">
+                  <a
+                    href="index.html"
+                    class="hero-signup btn-animation geturl aos-init"
+                    target="_blank"
+                    >English Live Webinar</a
+                  >
+                </div>
+              </div>
+              <div class="timeline-details sky-details">
+                <p class="mb-0 text-light hindidatetime">
+                  Jan 28, 2024 2:57 am
+                </p>
+                <div class="sign-btn mt-0 ms-lg-5">
+                  <a
+                    href="index.html"
+                    class="hero-signup btn-animation hindiurl aos-init btn-sky"
+                    target="_blank"
+                    >Hindi Live Webinar</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hosting-block mt-lg-5 mt-4">
+            <!-- <img src="assets/images/hosted.png" alt="image"> -->
+            <div class="host_card">
+              <h2
+                class="text-center d-md-none d-block font-14 text-saffron mb-3"
+              >
+                Unlock The Secrets Of <br />
+                Professional Institutional Traders
+              </h2>
+              <div class="video-container player-container position-relative">
+                <iframe
+                  width="100%"
+                  height=""
+                  src="https://player.vimeo.com/video/816184115?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"
+                  frameborder="0"
+                  allow="autoplay"
+                  controls
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div class="bttm-logo d-md-flex">
+                <div
+                  class="d-md-block d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="./assets/images/udner_div_logo.svg"
+                    alt="udner_div_logo"
+                  />
+                  <div class="d-md-none d-inline-block host-brder">
+                    <div class="hoster-by">
+                      <span>Hosted by StockWiz</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bttm-lgo_inner text-md-start text-center d-md-block d-none"
+                >
+                  <h2 class="text-white">
+                    <span class="d-md-block d-none"
+                      >HOSTED BY STOCKWIZ - INDIA'S #1 PROFESSIONAL TRADING
+                      COMMUNITY</span
+                    >
+                  </h2>
+                  <a href="#" class="d-md-inline-block d-none">
+                    SEBI REGISTERED RESEARCH ANALYST
+                    <span class="dot-6"></span> INH000013925
+                  </a>
+                </div>
+                <div
+                  class="bttm-lgo_inner text-md-start text-center d-md-none d-block"
+                >
+                  <h2 class="text-white">
+                    <span class="d-md-block d-none">HOSTED BY STOCKWIZ - </span
+                    >India’s
+                    <span class="green-txt-resp"> #1</span> Professional <br />
+                    Trading Community
+                  </h2>
+                  <a href="#" class="d-md-inline-block d-none">
+                    SEBI REGISTERED RESEARCH ANALYST
+                    <span class="dot-6"></span> INH000013925
+                  </a>
+                </div>
+              </div>
+              <div
+                class="d-md-none d-flex justify-content-center align-items-center position-relative sebi_card_img sebi-trad-resp"
+              >
+                <div class="sebi-resp-logo">
+                  <img
+                    src="./assets/images/ic_sharp-verified.svg"
+                    alt="ic_sharp-verified"
+                  />
+                </div>
+                <div class="sebi-resp">
+                  <p class="mb-lg-3 mb-0">
+                    <span class="text-uppercase">SEBI Registered</span>
+                    <span class="text-capitalize">Research Analyst</span>
+                  </p>
+                  <span>INH000013925</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  <div class="row justify-content-center d-md-none d-flex">
+                    <div class="col-lg-8 text-center">
+                        <div class="timeline-details mt-lg-4 mt-4">
+                            <p class="mb-0 text-light datetimemobile"></p>
+                            <div class="sign-btn mt-0 ms-lg-5">
+                                <a href="#" class="hero-signup d-block btn-animation geturl" target="_blank">Live Webinar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="slider-block news-logo-strp">
+        <div class=" ">
+          <p class="title-slider mb-4">Featured In</p>
+          <!-- <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl1.png" alt="image">
+                        </div> 
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl2.png" alt="image">
+                        </div> 
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl3.png" alt="image">
+                        </div> 
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl4.png" alt="image">
+                        </div>
+
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl1.png" alt="image">
+                        </div> 
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl2.png" alt="image">
+                        </div> 
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl3.png" alt="image">
+                        </div> 
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl4.png" alt="image">
+                        </div>
+
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl1.png" alt="image">
+                        </div> 
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl2.png" alt="image">
+                        </div> 
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl3.png" alt="image">
+                        </div> 
+                        <div class="slide">
+                            <img src="assets/images/img-slider/img-sl4.png" alt="image">
+                        </div> 
+                    </div>
+                </div> -->
+          <div class="gxnlqn">
+            <div class="feature-brand">
+              <div class="feature-logo f1">
+                <img src="assets/images/img-slider/1.png" alt="CNBC" />
+              </div>
+              <div class="feature-logo f2">
+                <img
+                  src="assets/images/img-slider/financial_express.png"
+                  alt="financial_express"
+                />
+              </div>
+              <div class="feature-logo f3">
+                <img src="assets/images/img-slider/3.png" alt="Money control" />
+              </div>
+              <div class="feature-logo f4">
+                <img src="assets/images/img-slider/4.png" alt="TEDx" />
+              </div>
+              <div class="feature-logo f5">
+                <img src="assets/images/img-slider/5.png" alt="the print" />
+              </div>
+              <div class="feature-logo f6">
+                <img src="assets/images/img-slider/6.png" alt="time of india" />
+              </div>
+              <div class="feature-logo f7">
+                <img
+                  src="assets/images/img-slider/7.png"
+                  alt="business standar"
+                />
+              </div>
+              <div class="feature-logo f8">
+                <img
+                  src="assets/images/img-slider/8.png"
+                  alt="hindustan time"
+                />
+              </div>
+
+              <div class="feature-logo f1">
+                <img src="assets/images/img-slider/1.png" alt="CNBC" />
+              </div>
+              <div class="feature-logo f2">
+                <img
+                  src="assets/images/img-slider/financial_express.png"
+                  alt="financial_express"
+                />
+              </div>
+              <div class="feature-logo f3">
+                <img src="assets/images/img-slider/3.png" alt="Money control" />
+              </div>
+              <div class="feature-logo f4">
+                <img src="assets/images/img-slider/4.png" alt="TEDx" />
+              </div>
+              <div class="feature-logo f5">
+                <img src="assets/images/img-slider/5.png" alt="the print" />
+              </div>
+              <div class="feature-logo f6">
+                <img src="assets/images/img-slider/6.png" alt="time of india" />
+              </div>
+              <div class="feature-logo f7">
+                <img
+                  src="assets/images/img-slider/7.png"
+                  alt="business standar"
+                />
+              </div>
+              <div class="feature-logo f8">
+                <img
+                  src="assets/images/img-slider/8.png"
+                  alt="hindustan time"
+                />
+              </div>
+
+              <div class="feature-logo f1">
+                <img src="assets/images/img-slider/1.png" alt="CNBC" />
+              </div>
+              <div class="feature-logo f2">
+                <img
+                  src="assets/images/img-slider/financial_express.png"
+                  alt="financial_express"
+                />
+              </div>
+              <div class="feature-logo f3">
+                <img src="assets/images/img-slider/3.png" alt="Money control" />
+              </div>
+              <div class="feature-logo f4">
+                <img src="assets/images/img-slider/4.png" alt="TEDx" />
+              </div>
+              <div class="feature-logo f5">
+                <img src="assets/images/img-slider/5.png" alt="the print" />
+              </div>
+              <div class="feature-logo f6">
+                <img src="assets/images/img-slider/6.png" alt="time of india" />
+              </div>
+              <div class="feature-logo f7">
+                <img
+                  src="assets/images/img-slider/7.png"
+                  alt="business standar"
+                />
+              </div>
+              <div class="feature-logo f8">
+                <img
+                  src="assets/images/img-slider/8.png"
+                  alt="hindustan time"
+                />
+              </div>
+
+              <div class="feature-logo f1">
+                <img src="assets/images/img-slider/1.png" alt="CNBC" />
+              </div>
+              <div class="feature-logo f2">
+                <img
+                  src="assets/images/img-slider/financial_express.png"
+                  alt="financial_express"
+                />
+              </div>
+              <div class="feature-logo f3">
+                <img src="assets/images/img-slider/3.png" alt="Money control" />
+              </div>
+              <div class="feature-logo f4">
+                <img src="assets/images/img-slider/4.png" alt="TEDx" />
+              </div>
+              <div class="feature-logo f5">
+                <img src="assets/images/img-slider/5.png" alt="the print" />
+              </div>
+              <div class="feature-logo f6">
+                <img src="assets/images/img-slider/6.png" alt="time of india" />
+              </div>
+              <div class="feature-logo f7">
+                <img
+                  src="assets/images/img-slider/7.png"
+                  alt="business standar"
+                />
+              </div>
+              <div class="feature-logo f8">
+                <img
+                  src="assets/images/img-slider/8.png"
+                  alt="hindustan time"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="webinar-links learn_webinar_sec">
+        <div class="container">
+          <div
+            class="head_wrap position-relative mb-lg-5 mb-4 prple-shadow yello-shadow"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="heading_dv text-center">
+              <h2 class="text-white">
+                What Will You Learn<br />
+                <span> In This Webinar ?</span>
+              </h2>
+            </div>
+          </div>
+          <!-- Swiper -->
+          <div class="position-relative">
+            <div class="learn_slide_wrap screenshot_slider">
+              <div class="swipers-wrapper">
+                <div class="items">
+                  <div class="card_learn">
+                    <div class="learn_img mb-4">
+                      <img
+                        src="./assets/images/Website-Gif/3_1.gif"
+                        alt="learn1"
+                        class="img-fluid w-100"
+                      />
+                    </div>
+                    <div class="learn_btm_ctn">
+                      <h2 class="text-white mb-3">
+                        How To Catch Big Moves Before They Happen ?
+                      </h2>
+                      <p class="line-clamp mb-4">
+                        Professional traders are very well aware about retail
+                        trading methods like using chart patterns, trendlines,
+                        candlestick patterns, indicators etc and hence, they
+                        design market traps with their algorithms and once
+                        retail traders are trapped, the actual move happens in
+                        the market. BUT, you can learn institutional order flow
+                        and trade with the big players.
+                      </p>
+                      <div class="text-center">
+                        <a href="#" class="green_btn geturl" target="_blank"
+                          >Register Now!
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="card_learn">
+                    <div class="learn_img mb-4">
+                      <img
+                        src="./assets/images/Website-Gif/1.gif"
+                        alt="learn1"
+                        class="img-fluid w-100"
+                      />
+                    </div>
+                    <div class="learn_btm_ctn">
+                      <h2 class="text-white mb-3">
+                        Why Breakouts, Chart Patterns & Indicators Fail ?
+                      </h2>
+                      <p class="line-clamp mb-4">
+                        Retail trading is so boring, it is ineffective and
+                        doesn't produce good trading results. It just makes you
+                        get trapped, only to take your stop loss. Learn how
+                        Institutions Trade, that's the future of trading.
+                      </p>
+                      <div class="text-center">
+                        <a href="#" class="green_btn geturl" target="_blank"
+                          >Register Now!
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="card_learn">
+                    <div class="learn_img mb-4">
+                      <img
+                        src="./assets/images/Website-Gif/2_1.gif"
+                        alt="learn1"
+                        class="img-fluid w-100"
+                      />
+                    </div>
+                    <div class="learn_btm_ctn">
+                      <h2 class="text-white mb-3">
+                        How To Identify Institutional Entries?
+                      </h2>
+                      <p class="line-clamp mb-4">
+                        More than 80% of all orders executed in the financial
+                        markets are by algorithms which is how big players or
+                        the institutions place their orders. However in this
+                        process, they leave some footprints which we can use, to
+                        know where they will enter again.
+                      </p>
+                      <div class="text-center">
+                        <a href="#" class="green_btn geturl" target="_blank"
+                          >Register Now!
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="card_learn">
+                    <div class="learn_img mb-4">
+                      <img
+                        src="./assets/images/Website-Gif/1.gif"
+                        alt="learn1"
+                        class="img-fluid w-100"
+                      />
+                    </div>
+                    <div class="learn_btm_ctn">
+                      <h2 class="text-white mb-3">
+                        Why Breakouts, Chart Patterns & Indicators Fail ?
+                      </h2>
+                      <p class="line-clamp mb-4">
+                        Retail trading is so boring, it is ineffective and
+                        doesn't produce good trading results. It just makes you
+                        get trapped, only to take your stop loss. Learn how
+                        Institutions Trade, that's the future of trading.
+                      </p>
+                      <div class="text-center">
+                        <a href="#" class="green_btn geturl" target="_blank"
+                          >Register Now!
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="swiper-pagination"></div>
+                          
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="check_out_monster">
+        <div class="container">
+          <div
+            class="head_wrap position-relative mb-lg-5 mb-4 prple-shadow yello-shadow"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="heading_dv text-center">
+              <h2 class="text-white">
+                Check Out Our Monster<br />
+                Trades Taken In <span>Live Markets</span>
+              </h2>
+            </div>
+          </div>
+          <!--desktop only-->
+          <div class="monster_wrap monster_desk d-md-block d-none">
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <div class="after_before position-absolute">
+                  <span class="before-btn">Before</span>
+                </div>
+                <img
+                  src="./assets/images/after_before/before_1.png"
+                  alt="before"
+                />
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <div class="after_before position-absolute">
+                  <span class="after-btn">After</span>
+                </div>
+                <img
+                  src="./assets/images/after_before/after_01.png"
+                  alt="before"
+                  class="after_img"
+                />
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <div class="after_before position-absolute">
+                  <span class="before-btn">Before</span>
+                </div>
+                <img
+                  src="./assets/images/after_before/before_02.png"
+                  alt="before"
+                />
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <div class="after_before position-absolute">
+                  <span class="after-btn">After</span>
+                </div>
+                <img
+                  src="./assets/images/after_before/after_02.png"
+                  alt="before"
+                />
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <div class="after_before position-absolute">
+                  <span class="before-btn">Before</span>
+                </div>
+                <img
+                  src="./assets/images/after_before/before_03.png"
+                  alt="before"
+                />
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <div class="after_before position-absolute">
+                  <span class="after-btn">After</span>
+                </div>
+                <img
+                  src="./assets/images/after_before/after_03.png"
+                  alt="before"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!--responsive only-->
+          <div class="monster_wrap monster_resp d-md-none d-block">
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <!-- <div class="after_before position-absolute">
+                                <span class="before-btn">Before</span>
+                                <span class="after-btn">After</span>
+                            </div> -->
+                <div class="res_af_img">
+                  <img
+                    src="./assets/images/after_before/before_1.png"
+                    alt="before"
+                    class="before_img"
+                  />
+                  <img
+                    src="./assets/images/after_before/after_01.png"
+                    alt="before"
+                    class="after_img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <!-- <div class="after_before position-absolute">
+                                <span class="before-btn">Before</span>
+                                <span class="after-btn">After</span>
+                            </div> -->
+                <div class="res_af_img">
+                  <img
+                    src="./assets/images/after_before/before_02.png"
+                    alt="before"
+                    class="before_img"
+                  />
+                  <img
+                    src="./assets/images/after_before/after_02.png"
+                    alt="before"
+                    class="after_img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <!-- <div class="after_before position-absolute">
+                                <span class="before-btn">Before</span>
+                                <span class="after-btn">After</span>
+                            </div> -->
+                <div class="res_af_img">
+                  <img
+                    src="./assets/images/after_before/before_03.png"
+                    alt="before"
+                    class="before_img"
+                  />
+                  <img
+                    src="./assets/images/after_before/after_03.png"
+                    alt="before"
+                    class="after_img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <!-- <div class="after_before position-absolute">
+                                <span class="before-btn">Before</span>
+                                <span class="after-btn">After</span>
+                            </div> -->
+                <div class="res_af_img">
+                  <img
+                    src="./assets/images/after_before/before_1.png"
+                    alt="before"
+                    class="before_img"
+                  />
+                  <img
+                    src="./assets/images/after_before/after_01.png"
+                    alt="before"
+                    class="after_img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <!-- <div class="after_before position-absolute">
+                                <span class="before-btn">Before</span>
+                                <span class="after-btn">After</span>
+                            </div> -->
+                <div class="res_af_img">
+                  <img
+                    src="./assets/images/after_before/before_02.png"
+                    alt="before"
+                    class="before_img"
+                  />
+                  <img
+                    src="./assets/images/after_before/after_02.png"
+                    alt="before"
+                    class="after_img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="monster_card">
+              <div class="monster_img img_before position-relative">
+                <!-- <div class="after_before position-absolute">
+                                <span class="before-btn">Before</span>
+                                <span class="after-btn">After</span>
+                            </div> -->
+                <div class="res_af_img">
+                  <img
+                    src="./assets/images/after_before/before_03.png"
+                    alt="before"
+                    class="before_img"
+                  />
+                  <img
+                    src="./assets/images/after_before/after_03.png"
+                    alt="before"
+                    class="after_img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+            <div class="check-btn-m">
+              <a
+                href="#"
+                class="d-inline-block green_btn mb-2 geturl"
+                target="_blank"
+                >Join Now (English)</a
+              >
+              <a
+                href="#"
+                class="d-inline-block green_btn mb-2 hindiurl btn-sky"
+                target="_blank"
+                >Join Now (Hindi)</a
+              >
+            </div>
+            <span class="d-block">(9+ Years Of Trading Experience)</span>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="limited-offer">
+        <!-- <div class="marquee-container">
+                <ul class="d-flex align-items-center marquee-content">
+                    <li><span class="green-blue-grident-text fw-bold">Limited Time Offer </span>Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation Call.</li>
+                    <li>Offer Expires In call <span id="countdown" class="yellow-grident-text fw-bold">15 : 20 : 23</span></li>
+                </ul>
+            </div> -->
+
+        <div class="slider h-auto">
+          <div class="slide-track">
+            <ul class="d-flex align-items-center">
+              <li>
+                <span class="green-blue-grident-text fw-bold"
+                  >Limited Time Offer </span
+                >Sign Up Now And Get 50% Discount + Free E-Book + Free
+                Consultation Call.
+              </li>
+              <li>
+                Offer Expires In call
+                <span id="countdown" class="yellow-grident-text fw-bold"
+                  >15 : 20 : 23</span
+                >
+              </li>
+            </ul>
+            <ul class="d-flex align-items-center">
+              <li>
+                <span class="green-blue-grident-text fw-bold"
+                  >Limited Time Offer </span
+                >Sign Up Now And Get 50% Discount + Free E-Book + Free
+                Consultation Call.
+              </li>
+              <li>
+                Offer Expires In call
+                <span id="countdown" class="yellow-grident-text fw-bold"
+                  >04 : 59 : 38</span
+                >
+              </li>
+            </ul>
+            <ul class="d-flex align-items-center">
+              <li>
+                <span class="green-blue-grident-text fw-bold"
+                  >Limited Time Offer </span
+                >Sign Up Now And Get 50% Discount + Free E-Book + Free
+                Consultation Call.
+              </li>
+              <li>
+                Offer Expires In call
+                <span id="countdown" class="yellow-grident-text fw-bold"
+                  >04 : 59 : 38</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="webinar-links attend_webinar">
+        <div class="container">
+          <!--start-heading-->
+          <div
+            class="head_wrap position-relative mb-lg-5 mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="heading_dv text-center">
+              <h2 class="text-white">
+                After Attending This Webinar <br />
+                <span>You Will Be Able To</span>
+              </h2>
+            </div>
+          </div>
+          <!--end-->
+
+          <div class="feature_sec">
+            <div class="row g-lg-5 justify-content-center">
+              <div
+                class="col-lg-4 col-md-6 mb-lg-0 mb-5 feat-col"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="feature_box">
+                  <div class="feature_icon">
+                    <img
+                      src="./assets/images/icon/monthly_returns.png"
+                      alt="monthly_returns"
+                      class="img-fluid"
+                      width="64"
+                      height="68"
+                    />
+                  </div>
+                  <div class="ctn">
+                    <h3 class="txt-white-70">
+                      Generate Upto +12% Monthly Returns Consistently.
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-6 mb-lg-0 mb-5 feat-col"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div class="feature_box h-100">
+                  <div class="feature_icon">
+                    <img
+                      src="./assets/images/icon/big_moves.png"
+                      alt="big_moves"
+                      class="img-fluid"
+                      width="64"
+                      height="68"
+                    />
+                  </div>
+                  <div class="ctn">
+                    <h3 class="txt-white-70">
+                      Catch Big Moves Before They Happen.
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-6 mb-lg-0 mb-5 feat-col"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <div class="feature_box h-100">
+                  <div class="feature_icon">
+                    <img
+                      src="./assets/images/icon/professional.png"
+                      alt="professional"
+                      class="img-fluid"
+                      width="64"
+                      height="68"
+                    />
+                  </div>
+                  <div class="ctn">
+                    <h3 class="txt-white-70">
+                      Trade Like A Professional Stock Trader.
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="help-trader">
+        <div class="container">
+          <div class="d-lg-flex help-card-div align-items-center">
+            <div class="left mb-lg-0 mb-4">
+              <div
+                class="digit-counter mb-3"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <span id="time"></span>
+              </div>
+              <p
+                class="last-seats-tag"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                Last Few Seats Left! Grab Your Seats Now
+              </p>
+            </div>
+            <div
+              class="right text-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div class="mb-5">
+                <span class="lightwhite">Date & Time</span>
+                <h2 class="mb-md-3 mb-3 datetime2 d-block"></h2>
+                <!-- <p class="mb-4">We have helped 50,000+ Traders achieve mind blowing trading results by helping
+                            them understand</p> -->
+                <div class="join-webinar">
+                  <a
+                    href="#!"
+                    class="d-inline-block green_btn btn-animation mb-2 geturl"
+                    target="_blank"
+                    >Sign Up Now!</a
+                  >
+                  <span class="d-flex px-lg-4 font-18 justify-content-center"
+                    >(Seats Are Filling Very Fast)</span
+                  >
+                </div>
+              </div>
+              <div class="hindi-seat">
+                <span class="lightwhite">Date & Time</span>
+                <h2 class="mb-md-3 mb-3 hindidatetime1 d-block"></h2>
+                <!-- <p class="mb-4">We have helped 50,000+ Traders achieve mind blowing trading results by helping
+                            them understand</p> -->
+                <div class="join-webinar">
+                  <a
+                    href="#!"
+                    class="btn-sky d-inline-block green_btn btn-animation mb-2 hindiurl"
+                    target="_blank"
+                    >Sign Up Now!</a
+                  >
+                  <span class="d-flex px-lg-4 font-18 justify-content-center"
+                    >(Seats Are Filling Very Fast)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="trad-career-sec position-relative">
+        <div class="container">
+          <div
+            class="head_wrap mb-5"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="heading_dv text-center">
+              <h2 class="text-white mb-3">
+                We Help Traders Accelerate Their<br /><span
+                  >Trading Career</span
+                >
+              </h2>
+              <p class="txt-white-70">
+                We have helped 50,000+ Traders achieve mind blowing trading
+                results by helping them understand the REAL REASONS behind big
+                moves through
+                <a
+                  class="text-gray-bd txt-white-70 text-decoration-underline"
+                  href="#!"
+                  >Institutional Professional Trading Concepts.</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="right overflow-hidden">
+            <div class="sliders">
+              <div class="slider__wrap swiper-wrapper">
+                <div class="item swiper-slide">
+                  <div class="slider_career">
+                    <img
+                      src="./assets/images/trading-career.png"
+                      alt="trading-career"
+                      width="413"
+                      height="413"
+                    />
+                  </div>
+                </div>
+                <div class="item swiper-slide">
+                  <div class="slider_career">
+                    <img
+                      src="./assets/images/trading-career2.png"
+                      alt="trading-career2"
+                    />
+                  </div>
+                </div>
+                <div class="item swiper-slide">
+                  <div class="slider_career">
+                    <img
+                      src="./assets/images/trading-career.png"
+                      alt="trading-career"
+                      width="413"
+                      height="413"
+                    />
+                  </div>
+                </div>
+                <div class="item swiper-slide">
+                  <div class="slider_career">
+                    <img
+                      src="./assets/images/trading-career2.png"
+                      alt="trading-career"
+                      width="413"
+                      height="413"
+                    />
+                  </div>
+                </div>
+                <div class="item swiper-slide">
+                  <div class="slider_career">
+                    <img
+                      src="./assets/images/trading-career.png"
+                      alt="trading-career"
+                      width="413"
+                      height="413"
+                    />
+                  </div>
+                </div>
+                <div class="item swiper-slide">
+                  <div class="slider_career">
+                    <img
+                      src="./assets/images/trading-career2.png"
+                      alt="trading-career"
+                      width="413"
+                      height="413"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-center pt-lg-5 pt-4"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <a
+            href="#"
+            class="d-inline-block green_btn geturl btn-animation mb-2 px-5"
+            target="_blank"
+            >Yes, I Want To Learn</a
+          >
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="upcoming_webinar overflow-hidden">
+        <div class="container">
+          <div class="head_wrap mb-lg-5 mb-4">
+            <div
+              class="heading_dv text-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <h2 class="text-white mb-3">
+                Catch The <span>Biggest Breakouts</span> Before Everyone Else
+              </h2>
+              <p class="txt-white-70">
+                In this webinar you will learn how to use institutional order
+                flow techniques to catch the biggest<br />
+                moves with the highest risk reward ratio, consistently in the
+                markets.
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-around">
+            <div
+              class="col-lg-5 mb-lg-0 mb-4"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <div class="upcom_main position-relative text-center">
+                <div
+                  class="d-flex flex-column h-100 justify-content-between upcom_box"
+                >
+                  <h2 class="mb-lg-3 mb-4">
+                    <span class="txt_upcom">Upcoming Webinar</span>
+                  </h2>
+                  <div class="">
+                    <div class="dates text-center mb-lg-4">
+                      <span class="lightwhite">Date & Time (English)</span>
+                      <h2 class="mb-4 datetime3"></h2>
+                    </div>
+
+                    <a href="#" class="geturl" target="_blank"> Buy Now </a>
+                  </div>
+                  <div class="webinar-border">
+                    <span></span>
+                  </div>
+                  <div class="webinar-hindi">
+                    <div class="dates text-center mb-lg-4">
+                      <span class="lightwhite">Date & Time (Hindi)</span>
+                      <h2 class="mb-4 hindidatetime2"></h2>
+                    </div>
+
+                    <a href="#" class="hindiurl btn-sky" target="_blank">
+                      Buy Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+              <div class="upcom_main position-relative">
+                <div class="upcom_box webinar_box">
+                  <div
+                    class="d-flex flex-column h-100 justify-content-between upcom_box"
+                  >
+                    <h2 class="mb-lg-5 mb-4 text-center">
+                      <span class="txt_upcom">Webinar Bonuses</span>
+                    </h2>
+                  </div>
+                  <div class="webinar-free mb-3">
+                    <img src="assets/images/icon/free-ebook.svg" alt="image" />
+                    <p class="mb-0 text">
+                      <span class="highlight text-decoration-underline"
+                        >Free</span
+                      >
+                      E-book
+                    </p>
+                  </div>
+                  <div class="webinar-free mb-3">
+                    <img src="assets/images/icon/gift.svg" alt="image" />
+                    <p class="mb-0 text">
+                      Get
+                      <span class="highlight text-decoration-underline"
+                        >50%</span
+                      >
+                      Discount
+                    </p>
+                  </div>
+                  <div class="webinar-free mb-lg-4 mb-4">
+                    <img src="assets/images/icon/call.svg" alt="image" />
+                    <p class="mb-0 text">
+                      <span class="highlight text-decoration-underline"
+                        >Free
+                      </span>
+                      Consultation Call
+                    </p>
+                  </div>
+                  <div>
+                    <a href="#" class="geturl mb-5" target="_blank"
+                      >Join Webinar (English)</a
+                    >
+                    <a href="#" class="hindiurl btn-sky" target="_blank"
+                      >Join Webinar (Hindi)</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="yoush_attend">
+        <div class="container">
+          <div
+            class="head_wrap position-relative mb-lg-5 mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="heading_dv text-center">
+              <h2 class="text-white">
+                You Should <span>Attend This Webinar If</span>
+              </h2>
+            </div>
+          </div>
+          <div
+            class="yoush_wrap row justify-content-lg-between justify-content-center"
+          >
+            <div
+              class="col-lg-4 col-md-6 mb-lg-0 mb-5 yoush_out_bx"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <div class="yoush_box">
+                <div class="yous_img">
+                  <img
+                    src="./assets/images/icon/money.png"
+                    alt="money"
+                    class="d-md-block d-none m-auto"
+                  />
+                  <img
+                    src="./assets/images/icon/money-hover.png"
+                    alt="money-hover"
+                    class="d-md-none d-block"
+                  />
+                </div>
+                <div class="ctn">
+                  <h3>You Want To Become A <span>Professional Trader</span></h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 mb-lg-0 mb-5 yoush_out_bx"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div class="yoush_box skyfilter h-100">
+                <div class="yous_img">
+                  <img
+                    src="./assets/images/icon/trading-chart.png"
+                    alt="trading-chart"
+                    class="d-md-block d-none m-auto"
+                  />
+                  <img
+                    src="./assets/images/icon/trading-chart-hover.png"
+                    alt="trading-chart-hover"
+                    class="d-md-none d-block"
+                  />
+                </div>
+                <div class="ctn">
+                  <h3>
+                    You Want To Make <span>Consistent Profits</span> In The
+                    Markets
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 mb-lg-0 yoush_out_bx"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <div class="yoush_box parplefilter h-100">
+                <div class="yous_img">
+                  <img
+                    src="./assets/images/icon/growth.png"
+                    alt="growth"
+                    class="d-md-block d-none m-auto"
+                  />
+                  <img
+                    src="./assets/images/icon/growth-hover.png"
+                    alt="growth-hover"
+                    class="d-md-none d-block"
+                  />
+                </div>
+                <div class="ctn">
+                  <h3>
+                    You Want To Start From The <span>Absolute Basics</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <!-- <section class="your_coach_sec">
+            <div class="container">
+                <div class="ur-coach-card your_coach_card d-lg-flex">
+                    <div class="left">
+                        <div class="client_info">
+                            <span class="mb-3 d-block">Your Coach</span>
+                            <h2>Parang Mehta</h2>
+                            <h3>(CFA | MBA | FMVA)</h3>
+                        </div>
+                        <div class="seb_card sebi_card_img d-flex align-items-center">
+                            <div class="sebi-img">
+                                <img src="./assets/images/ic_sharp-verified.svg" alt="ic_sharp-verified">
+                            </div>
+                            <div class="sebi-ctn">
+                                <span>SEBI Registered Research Analyst</span>
+                                <h3>INH000013925</h3>
+                            </div>
+                        </div>
+                        <p>Mr Parang Mehta is a full time trader  and investor with 9+ years of experience in the financial markets and is the Director & Chairman of StockWiz Technologies LLP. He has been featured in leading national business media houses such as CNBC, Money Control, Financial Express and has also given a TED Talk on Institutional Stock Trading. He has trained and coached 100,000+ traders across the world about the art of institutional stock trading.</p>
+                        <div class="d-md-none d-flex justify-content-center align-items-center position-relative sebi_card_img sebi-trad-resp">
+                            <div class="sebi-resp-logo">
+                                <img src="./assets/images/ic_sharp-verified.svg" alt="ic_sharp-verified">
+                            </div>
+                            <div class="sebi-resp">
+                                <p class="mb-lg-3 mb-0">
+                                    <span class="text-uppercase">SEBI Registered</span> 
+                                    <span class="text-capitalize">Research Analyst</span>
+                                </p>
+                                <span>INH000013925</span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="right text-center">
+                        <img src="./assets/images/banner-top.png" width="420" height="562" alt="banner-top">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+      <section class="your-cach-sec position-relative">
+        <div class="position-absolute image-wrap">
+          <img
+            src="./assets/images/shap/meet-your-left.png"
+            alt="meet-your-left"
+            class="small-crl-img"
+          />
+          <img
+            src="./assets/images/shap/meet-your-right.png"
+            alt="meet-your-right"
+            class="hlf-img1"
+          />
+          <img
+            src="./assets/images/shap/meet-your-small.png"
+            alt="meet-your-small"
+            class="hlf-img2"
+          />
+        </div>
+        <div class="container">
+          <div
+            class="heading_dv title-shadow text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h2 class="font-60 mb-60">Your <span>Coach</span></h2>
+          </div>
+          <div class="coach-row banner_crd_brder d-lg-flex align-items-end">
+            <div
+              class="coach-left text-lg-start text-center"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <div class="cach-card">
+                <div class="d-lg-none d-block coach-res-img">
+                  <img src="./assets/images/banner-top.png" alt="banner-top" />
+                </div>
+                <h3>Parang Mehta</h3>
+                <span class="txt-white-60"
+                  >(CFA Level III Candidate | MBA | FMVA)</span
+                >
+                <div class="coach-ctn txt-white-50">
+                  <p>
+                    Hello Everyone! I am Parang, Chairman &amp; Managing
+                    Director at StockWiz Technologies.
+                  </p>
+                  <p>
+                    I Am A Full Time Trader, Investor, Mentor &amp; Have Trained
+                    50K+ Traders, The Art &amp; Science of Professional Trading.
+                    My Mission is to Educate, Train, Fund &amp; Help Traders.
+                  </p>
+                </div>
+                <div class="seb_card sebi_card_img d-flex align-items-center">
+                  <div class="sebi-img">
+                    <img
+                      src="./assets/images/ic_sharp-verified-green.svg"
+                      alt="ic_sharp-verified"
+                    />
+                  </div>
+                  <div class="sebi-ctn">
+                    <span>SEBI Registered Research Analyst</span>
+                    <h3>INH000013925</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="coach-right text-center"
+              data-aos="fade-in"
+              data-aos-duration="2000"
+            >
+              <div class="d-lg-block d-none">
+                <img src="./assets/images/banner-top.png" alt="banner-top" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="testimonial-sec">
+        <div class="container">
+          <div
+            class="heading_dv title-shadow text-center mb-lg-5 mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h2 class="font-60 px-3">Hear It From <span>Our Students</span></h2>
+          </div>
+        </div>
+        <div class="testi_wrap">
+          <div class="testi-single d-xl-flex align-items-center">
+            <img src="./assets/images/feedback/user1.png" alt="user1" />
+            <div class="testi-ctn ms-xl-4">
+              <h3>Yash, Entrepreneur</h3>
+              <span
+                >“Truly Game Changing. I Will Never Use Retail Trading Concepts,
+                Ever.”</span
+              >
+              <p>
+                I got such a big reality check. Parang explained us how the
+                markets really work as opposed to the half baked knowledge I had
+                after watching YouTube Videos. Such an eye opener, I am now able
+                to trade like the professionals. Thank You So Much Team
+                StockWiz!
+              </p>
+            </div>
+          </div>
+          <div class="testi-single d-xl-flex align-items-center">
+            <img src="./assets/images/feedback/user2.png" alt="user1" />
+            <div class="testi-ctn ms-xl-4">
+              <h3>Abhishek, IIT Kanpur</h3>
+              <span
+                >“Mind Blowing! This Was The Best Trading Webinar I Have Ever
+                Attended.”</span
+              >
+              <p>
+                Well I was blown with the way you explained things. What a
+                perspective about trading and investing. The way you explain
+                things shows the kind of time and energy you have spent in
+                trading. I really was vibing with you man. Absolutely loved the
+                Webinar. Kudos!
+              </p>
+            </div>
+          </div>
+          <div class="testi-single d-xl-flex align-items-center">
+            <img src="./assets/images/feedback/user3.png" alt="user1" />
+            <div class="testi-ctn ms-xl-4">
+              <h3>Prashi, Infosys</h3>
+              <span>“This Workshop Transformed My Approach to Trading”</span>
+              <p>
+                I cannot express enough gratitude to Parang and the incredible
+                team at StockWiz. Before joining their program, my understanding
+                of the markets was based on fragmented knowledge from YouTube
+                videos. However, StockWiz provided me with a monumental reality
+                check that completely transformed my approach to trading.
+              </p>
+            </div>
+          </div>
+          <div class="testi-single d-xl-flex align-items-center">
+            <img src="./assets/images/feedback/user4.png" alt="user1" />
+            <div class="testi-ctn ms-xl-4">
+              <h3>Chelsi, MBA Student</h3>
+              <span
+                >“Absolutely brilliant! I’m super confident to use smart money
+                concepts now.”</span
+              >
+              <p>
+                I had no idea of stock trading, but this webinar helped me
+                understand everything from the absolute basics and now I’m super
+                confident to apply these in the markets. The best thing I liked
+                about this webinar is the live examples that Parang showed us,
+                which shows transparency and high skill level. Highly
+                recommended!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="time_is_ticking">
+        <div class="container">
+          <div class="time_is_brder">
+            <!--start-heading-->
+            <div
+              class="head_wrap position-relative mb-lg-5 mb-4"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div
+                class="heading_dv text-center"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <h2 class="text-white">Time Is <span>Ticking</span></h2>
+                <p class="txt-white-60 font-18">
+                  Don't miss out on something truly exceptional!
+                </p>
+              </div>
+            </div>
+            <!--end-heading-->
+
+            <div
+              class="timetick_wrap"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <span id="time_ticking">04 : 58 : 36</span>
+            </div>
+
+            <p
+              class="last-seats-tag mb-md-5 mb-4"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Last Few Seats Left! Grab Your Seats Now
+            </p>
+
+            <div
+              class="text-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div class="check-btn-m mb-3">
+                <a
+                  href="#"
+                  class="green_btn btn-animation px-5 geturl"
+                  target="_blank"
+                  >Sign Up For English</a
+                >
+                <a
+                  href="#"
+                  class="green_btn btn-sky btn-animation px-5 hindiurl"
+                  target="_blank"
+                  >Sign Up For Hindi</a
+                >
+              </div>
+              <p class="font-14 mb-2">
+                (Offer expires in 10 minutes, Hurry Up!)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end-->
+
+      <!--start-->
+      <section class="faq_sec">
+        <div class="container">
+          <div
+            class="head_wrap position-relative mb-lg-5 mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="heading_dv text-center">
+              <h2 class="text-white">
+                Frequently Asked <span>Questions</span>
+              </h2>
+            </div>
+          </div>
+          <h2 class="mb-4"></h2>
+          <div class="accordion custom-acc" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  What will be the duration of the webinar?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p class="txt-white-70">
+                    The duration of the webinar will be 120 minutes (2 hours).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  What will be the language of the webinar ?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p class="txt-white-70">
+                    The webinar will be delivered in simple English language.
+                    Doubts can be asked in Hindi.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Will we get the recordings of this webinar ?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p class="txt-white-70">
+                    This webinar will NOT be recorded, however if you attend the
+                    webinar, you will get a replay option where you can watch
+                    the content as many times as you like.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row justify-content-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="col-lg-8 text-center">
+              <div class="timeline-details mt-lg-4 mt-4">
+                <p class="mb-0 text-light datetime1"></p>
+                <div class="sign-btn mt-0 ms-lg-5">
+                  <a
+                    href="#"
+                    class="hero-signup d-block btn-animation geturl"
+                    target="_blank"
+                    >English Live Webinar</a
+                  >
+                </div>
+              </div>
+              <div class="timeline-details sky-details">
+                <p class="mb-0 text-light hindidatetime3"></p>
+                <div class="sign-btn mt-0 ms-lg-5">
+                  <a
+                    href="index.html"
+                    class="hero-signup btn-animation hindiurl aos-init btn-sky"
+                    target="_blank"
+                    >Hindi Live Webinar</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="footer-div">
+                <div class="logo">
+                  <img src="assets/images/icon/logosw.png" alt="loog" />
+                </div>
+                <p class="logo-text">StockWiz Technologies</p>
+                <div class="text-center">
+                  <p class="follow-text">FOLLOW US ON :</p>
+                  <div class="justify-content-center d-flex gap-4">
+                    <a href="https://wa.me/918949800532" target="_blank"
+                      ><img
+                        src="assets/images/icon/whatsapp.svg"
+                        class="follow-icon"
+                        alt="icon"
+                    /></a>
+                    <a
+                      href="https://www.instagram.com/pmtrades/"
+                      target="_blank"
+                      ><img
+                        src="assets/images/icon/instagram.svg"
+                        class="follow-icon"
+                        alt="icon"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <div class="copyright-div">
+                <p class="text-center txt-white-70 font-14">
+                  ©2024 StockWiz Technologies LLP. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--end-->
+    </main>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/jquery.scrollTo-min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <!-- <script src="assets/js/aos.js"></script> -->
+    <!-- <script src="assets/js/plugins.js"></script> -->
+    <script src="assets/js/slick.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-452ES35M91"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-452ES35M91");
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".monster_wrap").slick({
+          loop: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true,
+          dots: false,
+
+          autoplaySpeed: 6000, // 4 seconds delay between slides
+          speed: 500, // Animation speed
+          pauseOnHover: false,
+          pauseOnFocus: false,
+          infinite: true,
+          autoplay: true,
+          prevArrow:
+            "<button type='button' class='slick-prev pull-left'><img src='assets/images/arrow/left_arrow.png' alt='left-arrow'></button>",
+          nextArrow:
+            "<button type='button' class='slick-next pull-right'><img src='assets/images/arrow/right_arrow.png' alt='right-arrow'></button>",
+
+          responsive: [
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 577,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+              },
+            },
+          ],
+        });
+
+        $(".res_af_img").slick({
+          autoplay: true,
+          autoplaySpeed: 5000, // Adjust the speed as needed
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          fade: true,
+        });
+      });
+    </script>
+
+    <script>
+      $(".swipers-wrapper").slick({
+        centerPadding: "0",
+        dots: true,
+        infinite: true,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 500,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        touchThreshold: 100,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        centerMode: true,
+        prevArrow:
+          "<button type='button' class='slick-prev pull-left'><img src='assets/images/arrow/left_arrow.png'></button>",
+        nextArrow:
+          "<button type='button' class='slick-next pull-right'><img src='assets/images/arrow/right_arrow.png'></button>",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              centerMode: false,
+              centerMode: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              centerMode: false,
+              arrows: false,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              centerMode: false,
+              arrows: false,
+            },
+          },
+        ],
+      });
+    </script>
+
+    <script>
+      $(".slick_slider").slick({
+        dots: true,
+        infinite: true,
+        arrows: true,
+        touchThreshold: 100,
+        speed: 300,
+        autoplay: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        autoplaySpeed: 5000,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        centerMode: true,
+        prevArrow:
+          "<button type='button' class='slick-prev pull-left'><img src='assets/images/icon/left_arrow.png' ></button>",
+        nextArrow:
+          "<button type='button' class='slick-next pull-right'><img src='assets/images/icon/right_arrow.png' ></button>",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+
+    <script>
+      // Function to make cURL API call
+      var loader = document.querySelector(".loader");
+      function makeApiCall() {
+        var xhr = new XMLHttpRequest();
+        xhr.open(
+          "GET",
+          "https://api.stockwiz.in/api/v1/auth/getWebinarData",
+          true
+        );
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            var datetime = response.data.webinar_date_time; // assuming the API returns datetime in JSON format
+            document.querySelector(".datetime").innerText = datetime;
+            document.querySelector(".datetime1").innerText = datetime;
+            document.querySelector(".datetime2").innerText = datetime;
+            document.querySelector(".datetime3").innerText = datetime;
+
+            var hindidatetime = response.data.hindi_webinar_date_time; // assuming the API returns datetime in JSON format
+            document.querySelector(".hindidatetime").innerText = hindidatetime;
+            document.querySelector(".hindidatetime1").innerText = hindidatetime;
+            document.querySelector(".hindidatetime2").innerText = hindidatetime;
+            document.querySelector(".hindidatetime3").innerText = hindidatetime;
+
+            // webinar
+            var webinar_url = response.data.url; // assuming the API returns datetime in JSON format
+
+            var hindi_webinar_url = response.data.hindi_webinar_url; // assuming the API returns datetime in JSON format
+
+            var signupLinks = document.querySelectorAll(".geturl");
+            var signupHindiLinks = document.querySelectorAll(".hindiurl");
+
+            // Loop through each element and assign href
+            signupLinks.forEach(function (link) {
+              link.href = webinar_url;
+            });
+
+            signupHindiLinks.forEach(function (link) {
+              link.href = hindi_webinar_url;
+            });
+          }
+          loader.style.display = "none";
+
+          // Add class to body to prevent scrolling
+          document.body.classList.remove("body-no-scroll");
+        };
+        xhr.send();
+      }
+
+      // Call the function when the page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        makeApiCall();
+      });
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        // When the website is fully loaded, hide the loader
+        loader = document.querySelector(".loader");
+      });
+    </script>
+  </body>
+</html>
